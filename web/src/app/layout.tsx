@@ -1,8 +1,9 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
+import { Roboto_Flex as Roboto, Bai_Jamjuree as BaiJamjuree } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ['latin'] })
+const baijamJuree = BaiJamjuree({ subsets: ['latin'], weight: '700' })
 
 export const metadata = {
   title: 'wst spacetime',
@@ -12,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }
